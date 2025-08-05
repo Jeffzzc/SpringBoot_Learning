@@ -28,5 +28,8 @@ public class FileUploadController {
         if(!dir.exists()){
             dir.mkdirs();
         }
+
+        File file = new File(path + photo.getOriginalFilename());
+        photo.transferTo(file);
     }
 }
